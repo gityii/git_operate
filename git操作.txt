@@ -1,0 +1,37 @@
+
+1、
+github新建一个项目
+
+
+2、
+本地仓库使用如下命令初始化：
+$ git init
+
+之后使用如下命令添加远程库：
+$ git remote add origin git@github.com:hahah/你的库.git
+
+向库里面添加内容：
+$ git add -A
+
+添加注释：
+$ git commit -m "first commit"
+
+提交本地库：
+$ git push -u origin master
+
+
+
+
+n、
+git rm与git rm --cached
+
+当我们需要删除暂存区或分支上的文件, 同时工作区也不需要这个文件了, 可以使用
+
+1 git rm file_path
+2 git commit -m 'delete somefile'
+3 git push
+当我们需要删除暂存区或分支上的文件, 但本地又需要使用, 只是不希望这个文件被版本控制, 可以使用
+
+git rm --cached file_path
+git commit -m 'delete remote somefile'
+git push
